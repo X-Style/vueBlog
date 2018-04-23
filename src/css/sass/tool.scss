@@ -1,0 +1,93 @@
+.tool-list{
+	display: inline-block;
+    margin-bottom: 0;
+    border-bottom: 1px solid #edf1f2;
+    @include display;
+    @include justify_content(flex-end);
+	li{
+		display: inline-block;
+		a{
+			display: block;
+		    line-height: 14px;
+		    margin-bottom: 10px;
+		    padding: 10px;
+		    font-size: 14px;
+		    &:hover{
+		    	color: #ec1500;
+		    }
+		}
+		&.active a{
+			background: #2b333b;
+		    color: #fff;
+		    border-radius: 5px;
+		}
+	}
+}
+.tool{
+	width: 100%; // 兼容 IE 10
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.tool-box{
+	display: inline-table;
+    padding: $margin;
+    h1{
+    	font-size: 1.2rem;
+    	font-weight: 400;
+    	color: #14191e;
+    }
+}
+.tool-container{
+	@include display;
+	padding: $margin 0;
+	.tool-l{
+        margin-right: $margin;
+        span{ 
+        	display: block;
+        	width: 6rem;
+        	padding: .5rem;
+        	text-align: center;
+        	background-color: #dfdfdf;
+        }
+	}
+	.tool-r{
+		@include flex;
+		a{
+			padding: .5rem;
+    		display: inline-block;
+    		position: relative;
+    		color: #07111B;
+    		&:hover{
+				color: #ec1500;
+    		}
+    		&:after{
+    			content: "";
+    			width: 1px;
+    			height: 50%;
+    			display: block;
+    			font-size: 0;
+    			line-height: 0;
+    			background-color: #ccc;
+    			position: absolute;
+    			right: 0;
+    			top: 25%;
+    		}
+    		&:nth-child(5n+1){
+    			color: #6CC
+    		}
+    		&:nth-child(5n+2){
+    			color: #6C9
+    		}
+    		&:nth-child(5n+3){
+    			color: #E6CC6E
+    		}
+    		&:nth-child(5n+4){
+    			color: #37A7FF
+    		}
+    		&:nth-child(5n+5){
+    			color: #F99
+    		}
+    		&:last-child:after{display: none}
+		}
+	}
+}

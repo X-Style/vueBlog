@@ -1,0 +1,89 @@
+$indicator-color: #3593f2;
+.left-menu {
+  flex: 1 1 150px;
+  min-height: 150px;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  color: #666;
+  li {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    margin: .25rem 0;
+    cursor: pointer;
+    font-size: $fs8;
+
+
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+
+    &:hover {
+      text-shadow: 0 0 6px rgba(0,120,255,.9);
+    }
+    span{
+      display: block;
+      position: relative;
+      top: 0;
+      height: 90px;
+      overflow: hidden;
+      -moz-transition: all 400ms ease-out;
+      -webkit-transition: all 400ms ease-out;
+      -o-transition: all 400ms ease-out;
+      -ms-transition: all 400ms ease-out;
+      transition: all 400ms ease-out;
+      i{
+        display: block;
+        height: 45px;
+        line-height: 45px;
+        font-style: normal
+      }
+      &:hover {
+        top: -45px;
+      }
+    }
+    &.router-link-active{
+        span{
+          top: -45px;
+        }
+      }
+
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .left-menu{ display: block; }
+}
+
+
+
+/* .menu li{
+    position: relative;
+    display: block;
+    height: 26px;
+    overflow: hidden;
+}
+
+.menu span {
+    position: relative;
+    top: 0;
+    height: 52px;
+    overflow: hidden;
+    -moz-transition: all 400ms ease-out;
+    -webkit-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+}
+
+.menu span i {
+    display: block;
+    height: 26px;
+    line-height: 26px;
+}
+
+.menu span:hover {
+    top: -26px;
+} */

@@ -1,0 +1,87 @@
+.catalog header h2,.website-list .hot-item a,.website-list .new-item a{background:url('/static/img/icon.png') no-repeat;}
+.catalog .icon-template,.catalog .icon-inspiration,.catalog .icon-tool,.catalog .icon-photography{background:url('/static/img/icon2.png') no-repeat;}
+
+.catalog{
+	height:100%;
+	overflow:auto;
+	background-color:#f8f8f8;
+	position:relative;
+	div{
+		position:relative;
+	}
+}
+
+.catalog header{position:absolute;top:0;left:0;width:140px;height:166px;background-color:#fafafa;}
+.catalog header h2{font-family:'微软雅黑';font-size:1.4rem;height:28px;line-height:28px;color:#555;position:absolute;top:50%;margin-top:-14px;padding-left:40px;letter-spacing:2px;}
+
+.catalog .icon-download{background-position:10px -346px;}
+.catalog .icon-tutorials{background-position:10px -394px;}
+.catalog .icon-picture{background-position:10px -446px;}
+.catalog .icon-color{background-position:10px -496px;}
+.catalog .icon-ui{background-position:10px -546px;}
+.catalog .icon-font{background-position:10px -596px;}
+.catalog .icon-site{background-position:10px -647px;}
+.catalog .icon-blog{background-position:10px -697px;}
+.catalog .icon-infographic{background-position:10px -748px;}
+.catalog .icon-interactive{background-position:10px -798px;}
+.catalog .icon-infomation{background-position:10px -847px;}
+.catalog .icon-illustrated{background-position:10px -1261px;}
+.catalog .icon-company{background-position:10px -896px;}
+.catalog .icon-weibo{background-position:10px -946px;}
+.catalog .icon-photography{background-position:10px -93px;}
+
+.catalog .icon-template{background-position:10px 6px;}
+.catalog .icon-photography{background-position:10px -94px;}
+.catalog .icon-inspiration{background-position:10px -45px;}
+.catalog .icon-tool{background-position:10px -146px;}
+
+.website-list{
+	margin:0 30px 0 145px;
+	height:146px;
+	padding:10px 0;
+	overflow:hidden;
+	zoom:1;
+	background-color:#ffffff;
+	-webkit-transition:background-color 0.5s;
+	-moz-transition:background-color 0.5s;
+	-o-transition:background-color 0.5s;
+	-ms-transition:background-color 0.5s;
+	transition:background-color 0.5s;
+	border-bottom: 1px dashed #e8e8e8;
+	li{
+		float:left;
+		width:16.6%;
+		height:73px;
+		margin-left:-1px;
+		border-left:1px dashed #e8e8e8;
+		overflow:hidden;
+		cursor:pointer;
+		font-size:12px;
+		&:hover{
+			background-color:#f2f8fd;
+			a{color:#ee521c;text-decoration:underline;}
+			p{color:#585858;}
+		}
+		a{white-space:nowrap;display:block;margin:10px 15px 0;}
+		.description{margin:10px 15px 0;color:#a2a2a2;line-height:1.5;color:#266da1;}
+		&.hot-item a{padding-left:14px;background-position:0 -247px;}
+		&.new-item a{padding-left:14px;background-position:0 -297px;}
+	}
+}
+
+@media screen and (max-width:950px){
+.catalog header{position:static;width:100%;height:24px;margin:10px 0;}
+.catalog header h2{position:static;margin-top:0;margin-left:12px;}
+.catalog .website-list{margin-left:0;}
+}
+
+@media screen and (max-width:600px){
+.catalog{margin-top:20px;}
+.catalog header{height:30px;}
+.catalog header h2{/* font-size:1.4em;*/height:30px;line-height:30px;letter-spacing:1px;}
+.catalog header h2:first-letter{/* font-size:inherit;*/}
+.website-list{margin-right:0}
+.website-list li{width:33.3%;height:33px;}
+.website-list .website{margin:10px 15px 0;/* font-size:1em;*/}
+.website-list .description{display:none;}
+}
