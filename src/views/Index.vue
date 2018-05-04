@@ -17,6 +17,25 @@
         <span>{{ time }}</span>
         <span>{{ week }}</span>
       </div>
+      <vue-particles class="particles"
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
+
       <!-- <canvas id="particle" class="particle">Your Browser does not support Canvas, please upgrade</canvas>
       <remote-js src="/static/js/particle.js"></remote-js> -->
     </div>
@@ -70,7 +89,7 @@
         return num < 10 ? '0' + num : num
       }
       function checkWeek (date) {
-        var weeks = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+        var weeks = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
         return weeks[date]
       }
       this.clock = setInterval(() => {

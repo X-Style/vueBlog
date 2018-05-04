@@ -15,6 +15,9 @@ Vue.use(BgaBackTop)
 import MessageBox from './components/MessageBox/index'
 Vue.use(MessageBox)
 
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
+
 import lodash from 'lodash'
 import moment from 'moment'
 import marked from 'marked'
