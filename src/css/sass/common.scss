@@ -7,6 +7,8 @@
     flex: 0 0 199px;
     border-right: 1px solid #eee;
     height: 100%;
+    position: relative;
+    z-index: 2;
   }
   .left-layout-container {
     display: flex;

@@ -14,9 +14,10 @@
       </div>
       <div class="times">
         <span>{{ date }}</span>
-        <span>{{ time }}</span>
+        <span>{{ times }}</span>
         <span>{{ week }}</span>
       </div>
+      <!-- 粒子 Bef -->
       <vue-particles class="particles"
         color="#dedede"
         :particleOpacity="0.7"
@@ -35,7 +36,7 @@
         clickMode="push"
       >
       </vue-particles>
-
+      <!-- 粒子 End -->
       <!-- <canvas id="particle" class="particle">Your Browser does not support Canvas, please upgrade</canvas>
       <remote-js src="/static/js/particle.js"></remote-js> -->
     </div>
@@ -53,7 +54,7 @@
   export default {
     data () {
       return {
-        time: '',
+        times: '',
         date: '',
         week: '',
         clock: null
@@ -70,32 +71,19 @@
       }
     },
     components: {
-      'remote-js': {
-        render (createElement) {
-          return createElement('script', {
-            attrs: {
-              type: 'text/javascript', src: this.src
-            }
-          }
-          )
-        },
-        props: {
-          src: { type: String, required: true }
-        }
-      }
     },
     mounted () {
       function checkTmie (num) {
         return num < 10 ? '0' + num : num
       }
       function checkWeek (date) {
-        var weeks = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        var weeks = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
         return weeks[date]
       }
       this.clock = setInterval(() => {
         const myDate = new Date()
         this.date = checkTmie(myDate.getFullYear()) + '-' + checkTmie(myDate.getMonth() + 1) + '-' + checkTmie(myDate.getDate())
-        this.time = checkTmie(myDate.getHours()) + ':' + checkTmie(myDate.getMinutes()) + ':' + checkTmie(myDate.getSeconds())
+        this.times = checkTmie(myDate.getHours()) + ':' + checkTmie(myDate.getMinutes()) + ':' + checkTmie(myDate.getSeconds())
         this.week = checkWeek(new Date(myDate).getDay())
       }, 1000)
     },

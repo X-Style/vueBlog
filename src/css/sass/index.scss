@@ -104,12 +104,21 @@
 			text-shadow: 0px 1px 0 rgba(153,153,153,.6), 1px 2px 0 rgba(153,153,153,.4), 2px 3px 0 rgba(153,153,153,.25), 3px 4px 0 rgba(153,153,153,.15), 4px 5px 0 rgba(153,153,153,.1), 5px 6px 0 rgba(153,153,153,.05);
 		}
 	}
+	.particle{
+		position: absolute;
+		right: 0;
+		top: 0;
+		/* width: 100%;
+		height: calc(100% - 40px);
+		box-sizing: border-box; */
+	}
 	.particles{
 		position: absolute;
 		right: 0;
 		top: 0;
-		width: calc(100% - 200px);
-		height: 100%;
+		width: 100%;
+		height: calc(100% - 40px);
+		box-sizing: border-box;
 	}
 
 }

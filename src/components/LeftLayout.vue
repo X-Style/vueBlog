@@ -26,7 +26,10 @@
         <div v-if="showQQGroup" class="qq-group">
           <img src="/static/img/qq-group.jpg">
         </div>
-        <div class="copyright">@ {{copyright}}</div>
+        <div class="copyright">
+          <span>{{recordNumber}}</span>
+          <span>@ {{copyright}}</span>
+        </div>
       </div>
       <!-- 移动端 -->
       <div class="navbar">
