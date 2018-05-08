@@ -39,8 +39,19 @@ const state = {
   showQQGroup: true,  // 如果要显示你自己的 QQ 群二维码图片的话这里配置成 true 并且替换「BGAIssueBlog-Web/static/img/qq-group.png」为你自己的 QQ 群二维码图片，否则配置成 false 即可
   thirdPartySite: [  // 配置你想在左上角展示的第三方站点信息
     {
-      img: '/static/img/github.png',  // 第三方站点图标，存放在「BGAIssueBlog-Web/static/img」目录中
+      img: '/static/img/github.svg',  // 第三方站点图标，存放在「BGAIssueBlog-Web/static/img」目录中
+      imghover: '/static/img/github-hover.svg',
       url: 'https://github.com/X-Style'  // 第三方站点的 url
+    },
+    {
+      img: '/static/img/twitter.svg',  // 第三方站点图标，存放在「BGAIssueBlog-Web/static/img」目录中
+      imghover: '/static/img/twitter-hover.svg',
+      url: 'https://twitter.com/wangchongtech'  // 第三方站点的 url
+    },
+    {
+      img: '/static/img/weibo.svg',  // 第三方站点图标，存放在「BGAIssueBlog-Web/static/img」目录中
+      imghover: '/static/img/weibo-hover.svg',
+      url: 'https://weibo.com/jasondesigner'  // 第三方站点的 url
     }
     // 如果还有其他站点需要显示，继续在这里追加
   ]

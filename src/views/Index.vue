@@ -8,10 +8,17 @@
       </li>
     </ul> -->
     <div class="index-info-container">
-      <div>
+      <div class="index-info">
         <h1>WEB前端开发</h1>
         <h2>— 专注前端开发，关注用户体验 —</h2>
       </div>
+      <div class="times">
+        <span>{{ date }}</span>
+        <span>{{ time }}</span>
+        <span>{{ week }}</span>
+      </div>
+      <!-- <canvas id="particle" class="particle">Your Browser does not support Canvas, please upgrade</canvas>
+      <remote-js src="/static/js/particle.js"></remote-js> -->
     </div>
     <!-- 友情链接 -->
     <ul class="friendly-link">
@@ -27,6 +34,10 @@
   export default {
     data () {
       return {
+        time: '',
+        date: '',
+        week: '',
+        clock: null
       }
     },
     computed: {
@@ -40,6 +51,38 @@
       }
     },
     components: {
+      'remote-js': {
+        render (createElement) {
+          return createElement('script', {
+            attrs: {
+              type: 'text/javascript', src: this.src
+            }
+          }
+          )
+        },
+        props: {
+          src: { type: String, required: true }
+        }
+      }
+    },
+    mounted () {
+      function checkTmie (num) {
+        return num < 10 ? '0' + num : num
+      }
+      function checkWeek (date) {
+        var weeks = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+        return weeks[date]
+      }
+      this.clock = setInterval(() => {
+        const myDate = new Date()
+        this.date = checkTmie(myDate.getFullYear()) + '-' + checkTmie(myDate.getMonth() + 1) + '-' + checkTmie(myDate.getDate())
+        this.time = checkTmie(myDate.getHours()) + ':' + checkTmie(myDate.getMinutes()) + ':' + checkTmie(myDate.getSeconds())
+        this.week = checkWeek(new Date(myDate).getDay())
+      }, 1000)
+    },
+    beforeDestroy () {
+      // 清除定时器
+      window.clearInterval(this.clock)
     }
   }
 </script>

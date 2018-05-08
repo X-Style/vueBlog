@@ -1,3 +1,16 @@
+<!-- <template>
+  <div class="blog-container">
+    <router-view/>
+  </div>
+</template>
+<script>
+
+  export default {
+    components: {
+    }
+  }
+</script>
+ -->
 <template>
   <div class="blog-container">
   <ul class="label-list tool-list" >

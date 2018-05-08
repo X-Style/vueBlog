@@ -1,5 +1,4 @@
 import blogRoutes from './blog-routes'
-
 /**
  * 路由表配置
  */

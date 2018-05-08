@@ -27,9 +27,10 @@
         'updateActiveLabel'
       ]),
       setActiveLabel (label) {
+        console.log(label)
         if (this.$route.name === 'BlogDetail') {
           this.updateActiveLabel(label)
-          this.$router.push('/')
+          this.$router.push('/Blog/')
         } else {
           if (this.activeLabel && label && this.activeLabel.name === label.name) {
             this.updateActiveLabel(null)

@@ -22,7 +22,7 @@
     flex-direction: column;
     border-radius: 4px;
     border: solid 1px #eeeeee;
-    margin: 30px 0;
+    margin: 50px 0 30px;
     .tab-container {
       padding: 0 10px;
       border-bottom: solid 1px #eeeeee;

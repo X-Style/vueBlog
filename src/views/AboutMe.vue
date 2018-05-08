@@ -8,7 +8,13 @@
     flex-grow: 1;
     padding: 30px;
     overflow-y: auto;
+    blockquote{
+      p{
+      margin: 20px;
+      }
+    }
   }
+
 </style>
 <script>
   export default {

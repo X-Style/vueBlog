@@ -13,6 +13,8 @@
     </div>
     <div class="comment-container bga-back-top" ref="commentContainer">
       <comment :comment="issue"/>
+
+      <div class="line"></div>
       <div class="post-actions">
         <a href="javascript:;" @click="rewards" class="action-rewards">赞赏支持</a>
       </div>
@@ -48,7 +50,7 @@
       ]),
       setActiveLabel (label) {
         this.updateActiveLabel(label)
-        this.$router.push('/')
+        this.$router.push('/Blog')
       },
       getComments () {
         if (this.issue && this.issue.comments > 0) {
